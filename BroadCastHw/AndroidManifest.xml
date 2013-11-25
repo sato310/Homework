@@ -8,6 +8,7 @@
         android:minSdkVersion="8"
         android:targetSdkVersion="17" />
     
+    <!-- 今回必要なpermissionはこの二つ。電話系のpermission -->
     <uses-permission android:name="android.permission.CALL_PHONE"/>
     <uses-permission android:name="android.permission.PROCESS_OUTGOING_CALLS"/>
 
@@ -24,6 +25,8 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+            <!--ここは授業で習った通りの処理。ブラウザでwww.dhw.co.jpをタッチした時にMainActivityが呼ばれる処理。
+            action,categry.DEFAULTと,categry.BROWSABLE,data（URL）を設定 -->
             <intent-filter>
                 <action android:name="android.intent.action.VIEW"/>
                 <category android:name="android.intent.category.DEFAULT"/>
@@ -33,7 +36,9 @@
         </activity>
         <receiver  android:name=".SampleReceiver">
             <intent-filter >
+                <!--電話を掛けた時のブロードキャストアクション  -->
                 <action android:name="android.intent.action.NEW_OUTGOING_CALL"/>
+                <!--飛行機機内モードのブロードキャストアクション  -->
                 <action android:name="android.intent.action.AIRPLANE_MODE"/>
             </intent-filter>
         </receiver>
