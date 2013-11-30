@@ -39,7 +39,7 @@ public class SecoundActivity extends Activity {
 		// グループの数
 		groupCount = attendList.size() / memberCount;
 
-		// グループ分け（色々な所でOutOfBoundsExceptionが起こる可能性があるので、try～catch）
+		// グループ分け
 		try {
 			// 誤差範囲+1 or 余りなしの時の処理
 			if (range == 1 || remainder == 0) {
@@ -51,7 +51,7 @@ public class SecoundActivity extends Activity {
 				memberCount -= 1;
 				createGroup();
 			}
-			// 上の条件でOutOfBoundsExceptionが起きた時に別の処理を走らせる
+			
 		} catch (RuntimeException e) {
 			// 出席者数が設定してあるグループ人数以下の時にグループ人数を変更（トースト表示用）
 			if (attendList.size() <= memberCount) {

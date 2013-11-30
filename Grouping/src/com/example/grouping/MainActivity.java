@@ -56,7 +56,7 @@ public class MainActivity extends Activity {
 		listView.setChoiceMode(ListView.CHOICE_MODE_MULTIPLE);
 		listView.setAdapter(adapter);
 
-		// Preferencesに値が保存されていた場合はその情報を読み込むんで表示。
+		// Preferencesに値が保存されていた場合はその情報を読み込んで表示。
 		if (pref != null) {
 			// グループ分けの人数（初期値:4）
 			memberCount = pref.getInt("rule", 4);
