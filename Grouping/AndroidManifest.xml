@@ -23,7 +23,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.example.grouping.SecoundActivity"
+            android:name="com.example.grouping.SecondActivity"
             android:label="@string/title_activity_second" >
         </activity>
     </application>

@@ -9,7 +9,7 @@ import android.app.Activity;
 import android.widget.ListView;
 import android.widget.Toast;
 
-public class SecoundActivity extends Activity {
+public class SecondActivity extends Activity {
 	private int count;
 	private int number = 1;
 	private int remainder;
@@ -51,7 +51,6 @@ public class SecoundActivity extends Activity {
 				memberCount -= 1;
 				createGroup();
 			}
-			
 		} catch (RuntimeException e) {
 			// 出席者数が設定してあるグループ人数以下の時にグループ人数を変更（トースト表示用）
 			if (attendList.size() <= memberCount) {
@@ -69,7 +68,7 @@ public class SecoundActivity extends Activity {
 			}
 			// 設定条件でのグループ分けが出来ないので、通知する。
 			Toast.makeText(
-					SecoundActivity.this,
+					SecondActivity.this,
 					"指定された条件でのグループ分けができませんでしたので\n" + memberCount
 							+ "人毎にグループ分けします。", Toast.LENGTH_SHORT).show();
 			// try節で代入した値で誤差が出ないように初期化

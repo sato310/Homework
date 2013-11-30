@@ -89,7 +89,7 @@ public class MainActivity extends Activity {
 					}
 				}
 				Intent intent = new Intent(MainActivity.this,
-						SecoundActivity.class);
+						SecondActivity.class);
 				// 出席者情報を格納するListをput
 				intent.putStringArrayListExtra("attendList", attendList);
 				// グループ分けの人数
