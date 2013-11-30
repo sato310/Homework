@@ -51,6 +51,7 @@ public class SecoundActivity extends Activity {
 				memberCount -= 1;
 				createGroup();
 			}
+			
 		} catch (RuntimeException e) {
 			// 出席者数が設定してあるグループ人数以下の時にグループ人数を変更（トースト表示用）
 			if (attendList.size() <= memberCount) {
